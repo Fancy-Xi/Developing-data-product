@@ -1,0 +1,54 @@
+---
+title: "Try presentation"
+author: "Xi Fang"
+date: "8/10/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## My new slide
+
+*** 
+slide without title
+
+## Slide with Bullets
+### lalala
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## New slide
+
+plain text
+
+*italicized text*
+
+**Bold text**
+
+'for (i %in% 1:10)'
+
+## Slide with R Output
+
+```{r cars, echo = TRUE, comment=""}
+head(cars)
+summary(cars)
+```
+
+
+## Slide with just code
+
+```{r carsha, echo = TRUE, eval=FALSE}
+head(cars)
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure, echo=FALSE, fig.align='center', fig.cap='my figure'}
+plot(pressure)
+plot(mtcars$wt, mtcars$mpg, xlab="Weight", ylab = "MPG")
+```
+
