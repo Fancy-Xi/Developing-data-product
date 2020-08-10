@@ -1,0 +1,57 @@
+---
+title: "leaflet"
+author: "Xi Fang"
+date: "8/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## my first map
+```{r}
+library(leaflet)
+my_map <- leaflet() %>%
+        addTiles() # %>% is a piping notation equals to: my_map=leaflet(); my_map=addTiles(my_map)
+my_map
+
+```
+
+
+
+
+## adding markers
+```{r}
+library(leaflet)
+my_map <- my_map %>%
+        addMarkers(lat = 39.2980803, lng = -76.5898801,
+                   popup = "The instructor's Office")
+my_map
+
+```
+
+
+## adding many markers
+```{r marker}
+set.seed(2016-04-25)
+df <- data.frame(lat=runif(200, min = 39.2, max = 39.3),
+                 lng=runif(200,min = -79.6, max = -76.5))
+
+if %>%
+        leaflet() %>%
+        addTiles() %>%
+        addMarkers(clusterOptions = markerClusterOptions())
+```
+
+
+## mapping circle markers
+```{r circle}
+df <- data.frame(lat=runif(20, min = 39.2, max = 39.3),
+                 lng=runif(20,min = -79.6, max = -76.5))
+
+if %>%
+        leaflet() %>%
+        addTiles() %>%
+        addCircleMarkers()
+```
