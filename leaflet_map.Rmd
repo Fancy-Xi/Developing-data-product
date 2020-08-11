@@ -2,7 +2,9 @@
 title: "leaflet"
 author: "Xi Fang"
 date: "8/10/2020"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -22,7 +24,7 @@ my_map
 
 
 ## adding markers
-```{r}
+```{r, add}
 library(leaflet)
 my_map <- my_map %>%
         addMarkers(lat = 39.2980803, lng = -76.5898801,
@@ -38,7 +40,7 @@ set.seed(2016-04-25)
 df <- data.frame(lat=runif(200, min = 39.2, max = 39.3),
                  lng=runif(200,min = -79.6, max = -76.5))
 
-if %>%
+df %>%
         leaflet() %>%
         addTiles() %>%
         addMarkers(clusterOptions = markerClusterOptions())
@@ -50,7 +52,7 @@ if %>%
 df <- data.frame(lat=runif(20, min = 39.2, max = 39.3),
                  lng=runif(20,min = -79.6, max = -76.5))
 
-if %>%
+df %>%
         leaflet() %>%
         addTiles() %>%
         addCircleMarkers()
