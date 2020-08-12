@@ -1,0 +1,37 @@
+---
+title: "Fancy_Diamond_app"
+author: "Xi Fang"
+date: "8/12/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Fancy_Diamond Report
+
+Using shiny apps, an interactive webpage was created to predict diamond prices based on customized feasures
+
+## Application Introduction
+
+- The quality of diamonds can be assessed by different feasures, all of which will determine its value
+- Several common parameters include Carat, Size, Color, and Clarity
+- This app will predict the value of diamonds given a specific parameter
+
+## Slide with Output
+
+Click this link for the Application:
+https://fancy1128.shinyapps.io/Fancy_Diomond_app/
+
+Click this project to access all files for this project on Github:
+https://github.com/Fancy-Xi/Developing-data-product
+
+
+## data used
+
+```{r, echo=TRUE}
+library(ggplot2)
+head(diamonds)
+summary(diamonds)
+```
